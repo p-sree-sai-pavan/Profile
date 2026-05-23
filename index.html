@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pittala Sree Sai Pavan | Full-Stack Developer & Systems Programmer Portfolio</title>
+  <meta name="description" content="Portfolio of Pittala Sree Sai Pavan, Electronics & Communication Engineering student at IIT Guwahati. Specializing in Systems Programming (C/C++), Web Technologies, and AI Assistants.">
+  <meta name="keywords" content="Pittala Sree Sai Pavan, IIT Guwahati, Portfolio, Developer, Systems Programmer, C++, Compilers, Web Developer, React">
+  <meta name="author" content="Pittala Sree Sai Pavan">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="profile.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Dynamic Radial Cursor Glow (Desktop Only) -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Ambient background blobs -->
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="glass-header">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-accent">&lt;</span>ssp<span class="logo-accent">_09 /&gt;</span>
+      </a>
+      
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#terminal" class="nav-link">Terminal</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle light/dark theme">
+          <i data-lucide="moon" class="theme-icon-dark"></i>
+          <i data-lucide="sun" class="theme-icon-light"></i>
+        </button>
+        <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Open navigation menu">
+          <i data-lucide="menu" class="menu-icon-open"></i>
+          <i data-lucide="x" class="menu-icon-close"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="section-container hero-grid">
+        
+        <div class="hero-content">
+          <div class="hero-badge fade-in-up">
+            <span class="badge-dot"></span> Available for Opportunities
+          </div>
+          
+          <h1 class="hero-title fade-in-up">
+            Hey, I'm <br>
+            <span class="gradient-text text-glow">Sree Sai Pavan</span>
+          </h1>
+          
+          <h2 class="hero-subtitle fade-in-up">
+            Systems Programmer &amp; Full-Stack Developer
+          </h2>
+          
+          <p class="hero-description fade-in-up">
+            Electronics and Communication Engineering undergrad at <strong class="highlight-text">IIT Guwahati</strong>. Passionate about compilers, high-performance computing in C++, and crafting intelligent AI integrations with modern web stack interfaces.
+          </p>
+          
+          <div class="hero-actions fade-in-up">
+            <a href="#projects" class="btn btn-primary">
+              View My Work <i data-lucide="arrow-right" class="btn-icon"></i>
+            </a>
+            <button class="btn btn-secondary open-modal" data-modal="modal-resume">
+              View Resume <i data-lucide="eye" class="btn-icon"></i>
+            </button>
+          </div>
+
+          <div class="hero-socials fade-in-up">
+            <a href="https://github.com/ssp-09" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+              <i data-lucide="github"></i>
+            </a>
+            <a href="https://linkedin.com/in/pittala-sree-sai-pavan" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a href="mailto:sree.saipavan.pittala.me@gmail.com" class="social-link" title="Email">
+              <i data-lucide="mail"></i>
+            </a>
+            <a href="https://codeforces.com/profile/ssp_09" target="_blank" rel="noopener noreferrer" class="social-link cf-link" title="Codeforces">
+              <span class="cf-icon">CF</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual fade-in">
+          <div class="profile-card-wrapper">
+            <div class="profile-card-glow"></div>
+            <div class="profile-card">
+              <div class="profile-img-container">
+                <img src="profile.png" alt="Pittala Sree Sai Pavan" class="profile-img">
+              </div>
+              <div class="profile-info-overlay">
+                <div class="profile-tag">
+                  <i data-lucide="code-2"></i>
+                  <span>CVM++ Creator</span>
+                </div>
+                <div class="profile-tag">
+                  <i data-lucide="award"></i>
+                  <span>CF Specialist</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="scroll-indicator">
+        <span class="mouse-icon">
+          <span class="mouse-wheel"></span>
+        </span>
+        <span class="scroll-text">Scroll to explore</span>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section scroll-reveal">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-subtitle">Get To Know Me</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-card glass-card">
+            <h3>My Journey</h3>
+            <p>
+              I am currently pursuing a Bachelor of Technology in <strong>Electronics and Communication Engineering</strong> at the <strong>Indian Institute of Technology, Guwahati</strong>. Deeply interested in the intersection of hardware interfaces and core software architecture.
+            </p>
+            <p>
+              My coding journey revolves around building things from scratch. Whether it is building a zero-dependency C++ bytecode compiler and virtual machine (CVM++), optimizing graph algorithms (MWIS Solver) with custom bitmasks, or architecting persistent multi-session AI systems using LangGraph and vector embeddings, I enjoy tackling complex challenges and writing highly efficient, optimized code.
+            </p>
+            <div class="about-cta-container">
+              <a href="#contact" class="btn btn-primary btn-sm">Get in touch</a>
+              <span class="current-cgpa"><i data-lucide="graduation-cap"></i> CGPA: <strong>6.86</strong> (IIT Guwahati)</span>
+            </div>
+          </div>
+
+          <div class="about-dashboard glass-card" id="aboutDashboard">
+            <div class="dashboard-header">
+              <h3><i data-lucide="bar-chart-3"></i> Developer Archetype</h3>
+              <span class="dashboard-tag">Systems &amp; Algorithms</span>
+            </div>
+            <div class="radar-chart-container">
+              <svg id="radarChart" viewBox="0 0 400 400" width="100%" height="100%">
+                <defs>
+                  <radialGradient id="radarGlow" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="var(--accent-primary)" stop-opacity="0.25" />
+                    <stop offset="100%" stop-color="var(--accent-primary)" stop-opacity="0" />
+                  </radialGradient>
+                  <linearGradient id="polyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="var(--accent-primary)" stop-opacity="0.45" />
+                    <stop offset="100%" stop-color="var(--accent-secondary)" stop-opacity="0.45" />
+                  </linearGradient>
+                  <filter id="glow-effect" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="5" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                  </filter>
+                </defs>
+                
+                <!-- Background glow circle -->
+                <circle cx="200" cy="200" r="130" fill="url(#radarGlow)" />
+                
+                <!-- Web Grid Rings -->
+                <circle cx="200" cy="200" r="43.3" class="radar-ring" />
+                <circle cx="200" cy="200" r="86.6" class="radar-ring" />
+                <circle cx="200" cy="200" r="130" class="radar-ring" />
+                
+                <!-- Axis lines & elements populated by JS -->
+                <g id="radarAxes"></g>
+                <polygon id="radarPolygon" points="" fill="url(#polyGrad)" stroke="var(--accent-primary)" stroke-width="2" filter="url(#glow-effect)" />
+                <g id="radarPoints"></g>
+                <g id="radarLabels"></g>
+              </svg>
+              
+              <div id="radarTooltip" class="radar-tooltip"></div>
+            </div>
+            
+            <div class="archetype-legend">
+              <div class="legend-item" data-index="0">
+                <div style="display: flex; align-items: center;">
+                  <span class="legend-color systems"></span>
+                  <span class="legend-name">Systems &amp; Compilers</span>
+                </div>
+                <span class="legend-value">95%</span>
+              </div>
+              <div class="legend-item" data-index="1">
+                <div style="display: flex; align-items: center;">
+                  <span class="legend-color dsa"></span>
+                  <span class="legend-name">DSA &amp; Optimization</span>
+                </div>
+                <span class="legend-value">90%</span>
+              </div>
+              <div class="legend-item" data-index="2">
+                <div style="display: flex; align-items: center;">
+                  <span class="legend-color ai"></span>
+                  <span class="legend-name">AI Arch &amp; Memory</span>
+                </div>
+                <span class="legend-value">85%</span>
+              </div>
+              <div class="legend-item" data-index="3">
+                <div style="display: flex; align-items: center;">
+                  <span class="legend-color web"></span>
+                  <span class="legend-name">Full-Stack Dev</span>
+                </div>
+                <span class="legend-value">80%</span>
+              </div>
+              <div class="legend-item" data-index="4">
+                <div style="display: flex; align-items: center;">
+                  <span class="legend-color cp"></span>
+                  <span class="legend-name">Competitive Prog</span>
+                </div>
+                <span class="legend-value">88%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section scroll-reveal">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-subtitle">My Toolbox</span>
+          <h2 class="section-title">Technical Expertise</h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="skills-tabs">
+          <button class="skill-tab-btn active" data-tab="all">All Skills</button>
+          <button class="skill-tab-btn" data-tab="languages">Languages</button>
+          <button class="skill-tab-btn" data-tab="web">Web Tech</button>
+          <button class="skill-tab-btn" data-tab="tools">Tools &amp; Libraries</button>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Programming Languages -->
+          <div class="skill-card glass-card hover-lift" data-category="languages">
+            <div class="skill-info">
+              <div class="skill-title">
+                <i data-lucide="code" class="skill-icon language-icon"></i>
+                <span>C / C++</span>
+              </div>
+              <span class="skill-percent">95%</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 95%"></div>
+            </div>
+            <p class="skill-desc">Expertise in C++17, low-level optimization, memory safety, compilers, and pointers.</p>
+          </div>
+
+          <div class="skill-card glass-card hover-lift" data-category="languages">
+            <div class="skill-info">
+              <div class="skill-title">
+                <i data-lucide="terminal" class="skill-icon language-icon"></i>
+                <span>Python</span>
+              </div>
+              <span class="skill-percent">88%</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 88%"></div>
+            </div>
+            <p class="skill-desc">Highly proficient. Used for AI models, scraping, scripting, and scientific data analysis.</p>
+          </div>
+
+          <!-- Web Tech -->
+          <div class="skill-card glass-card hover-lift" data-category="web">
+            <div class="skill-info">
+              <div class="skill-title">
+                <i data-lucide="layout" class="skill-icon web-icon"></i>
+                <span>React</span>
+              </div>
+              <span class="skill-percent">82%</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 82%"></div>
+            </div>
+            <p class="skill-desc">Used for building responsive SPA frontends, dashboard analytics, and state management.</p>
+          </div>
+
+          <div class="skill-card glass-card hover-lift" data-category="web">
+            <div class="skill-info">
+              <div class="skill-title">
+                <i data-lucide="globe-2" class="skill-icon web-icon"></i>
+                <span>HTML / CSS / JavaScript</span>
+              </div>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 90%"></div>
+            </div>
+            <p class="skill-desc">Deep understanding of CSS Grid/Flexbox, DOM operations, ES6+, transitions, and responsive web design.</p>
+          </div>
+
+          <div class="skill-card glass-card hover-lift" data-category="web">
+            <div class="skill-info">
+              <div class="skill-title">
+                <i data-lucide="server" class="skill-icon web-icon"></i>
+                <span>Node.js / Express</span>
+              </div>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 80%"></div>
+            </div>
+            <p class="skill-desc">Server-side JS development, custom API architecture, security configurations, and JSON-based file storage databases.</p>
+          </div>
+
+          <!-- Tools & Libraries -->
+          <div class="skill-card glass-card hover-lift" data-category="tools">
+            <div class="skill-info">
+              <div class="skill-title">
+                <i data-lucide="binary" class="skill-icon tool-icon"></i>
+                <span>NumPy &amp; Pandas</span>
+              </div>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 85%"></div>
+            </div>
+            <p class="skill-desc">Data processing, multidimensional arrays, math operations, and scientific calculation modeling.</p>
+          </div>
+
+          <div class="skill-card glass-card hover-lift" data-category="tools">
+            <div class="skill-info">
+              <div class="skill-title">
+                <i data-lucide="network" class="skill-icon tool-icon"></i>
+                <span>NetworkX &amp; Matplotlib</span>
+              </div>
+              <span class="skill-percent">78%</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 78%"></div>
+            </div>
+            <p class="skill-desc">Graph modeling, network architecture analysis, and plotting custom data visualizers.</p>
+          </div>
+
+          <div class="skill-card glass-card hover-lift" data-category="tools">
+            <div class="skill-info">
+              <div class="skill-title">
+                <i data-lucide="git-branch" class="skill-icon tool-icon"></i>
+                <span>Git &amp; GitHub</span>
+              </div>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="progress-bar-container">
+              <div class="progress-bar" style="width: 90%"></div>
+            </div>
+            <p class="skill-desc">Advanced version control, branching, repository merges, actions, and team project collaboration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section scroll-reveal">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-subtitle">Showcase</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">All Work</button>
+          <button class="filter-btn" data-filter="systems">Systems &amp; Compilers</button>
+          <button class="filter-btn" data-filter="ai">AI &amp; Algorithms</button>
+          <button class="filter-btn" data-filter="web">Web Apps</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          
+          <!-- CVM++ -->
+          <div class="project-card glass-card hover-3d" data-category="systems">
+            <div class="project-img-wrapper">
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm open-modal" data-modal="modal-cvm">Learn More</button>
+              </div>
+              <div class="project-badge">Systems</div>
+              <div class="project-illustration cvm-illustration">
+                <div class="code-flow">
+                  <span>LEXER &rarr; PARSER</span>
+                  <span>COMPILER &rarr; VM</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-name">CVM++ — Stack-Based VM &amp; Compiler</h3>
+              <p class="project-short-desc">
+                A C++17 lexer, parser, bytecode compiler, and stack-based Virtual Machine pipeline with zero external dependencies.
+              </p>
+              <div class="project-tags">
+                <span class="tag">C++17</span>
+                <span class="tag">Compilers</span>
+                <span class="tag">VM</span>
+                <span class="tag">System Design</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="open-modal text-link" data-modal="modal-cvm">Details <i data-lucide="chevron-right"></i></a>
+                <a href="https://github.com/ssp-09" target="_blank" rel="noopener noreferrer" class="github-link"><i data-lucide="github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Parker -->
+          <div class="project-card glass-card hover-3d" data-category="ai">
+            <div class="project-img-wrapper">
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm open-modal" data-modal="modal-parker">Learn More</button>
+              </div>
+              <div class="project-badge">AI Assistant</div>
+              <div class="project-illustration parker-illustration">
+                <div class="ai-brain">
+                  <i data-lucide="brain-circuit"></i>
+                  <span>Persistent Memory</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-name">Parker — AI Assistant with Memory</h3>
+              <p class="project-short-desc">
+                AI assistant utilizing a 4-layer memory system, pgvector semantic search, episodic summary trees, and a state machine.
+              </p>
+              <div class="project-tags">
+                <span class="tag">LangGraph</span>
+                <span class="tag">pgvector</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Telegram API</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="open-modal text-link" data-modal="modal-parker">Details <i data-lucide="chevron-right"></i></a>
+                <a href="https://github.com/ssp-09" target="_blank" rel="noopener noreferrer" class="github-link"><i data-lucide="github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- MWIS Solver -->
+          <div class="project-card glass-card hover-3d" data-category="ai">
+            <div class="project-img-wrapper">
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm open-modal" data-modal="modal-mwis">Learn More</button>
+              </div>
+              <div class="project-badge">Algorithms</div>
+              <div class="project-illustration mwis-illustration">
+                <div class="graph-nodes">
+                  <span class="node active"></span>
+                  <span class="node"></span>
+                  <span class="node active"></span>
+                  <div class="link-line"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-name">MWIS Solver — Independent Set Solver</h3>
+              <p class="project-short-desc">
+                High-performance 3-phase graph solver built in C++ utilizing branch-and-bound DFS, bitmasks, and custom local searches.
+              </p>
+              <div class="project-tags">
+                <span class="tag">C++</span>
+                <span class="tag">Graph Theory</span>
+                <span class="tag">DFS</span>
+                <span class="tag">Bitmasks</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="open-modal text-link" data-modal="modal-mwis">Details <i data-lucide="chevron-right"></i></a>
+                <a href="https://github.com/ssp-09" target="_blank" rel="noopener noreferrer" class="github-link"><i data-lucide="github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- HabitFlow -->
+          <div class="project-card glass-card hover-3d" data-category="web">
+            <div class="project-img-wrapper">
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm open-modal" data-modal="modal-habit">Learn More</button>
+              </div>
+              <div class="project-badge">Web Application</div>
+              <div class="project-illustration habit-illustration">
+                <div class="habit-chart">
+                  <div class="bar animate-bar" style="height: 40%"></div>
+                  <div class="bar animate-bar" style="height: 70%"></div>
+                  <div class="bar animate-bar" style="height: 90%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-name">HabitFlow — React Habit Tracker</h3>
+              <p class="project-short-desc">
+                Interactive React client-side application for tracking daily habits, showing streaks, calendar logs, and analytics.
+              </p>
+              <div class="project-tags">
+                <span class="tag">React</span>
+                <span class="tag">CSS Variables</span>
+                <span class="tag">LocalStorage</span>
+                <span class="tag">Data Analytics</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="open-modal text-link" data-modal="modal-habit">Details <i data-lucide="chevron-right"></i></a>
+                <a href="https://github.com/ssp-09" target="_blank" rel="noopener noreferrer" class="github-link"><i data-lucide="github"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Terminal Section -->
+    <section id="terminal" class="terminal-section scroll-reveal">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-subtitle">Interactive Playground</span>
+          <h2 class="section-title">Developer Console</h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="terminal-container-wrapper">
+          <div class="terminal-window glass-card">
+            <div class="terminal-header">
+              <div class="terminal-buttons">
+                <span class="term-btn btn-close"></span>
+                <span class="term-btn btn-minimize"></span>
+                <span class="term-btn btn-maximize"></span>
+              </div>
+              <div class="terminal-title">ssp_09@iitg-ece: ~</div>
+              <div class="terminal-actions">
+                <button class="terminal-action-btn" id="terminalResetBtn" title="Reset Console">
+                  <i data-lucide="refresh-cw"></i>
+                </button>
+              </div>
+            </div>
+            <div class="terminal-screen" id="terminalScreen">
+              <!-- Matrix background canvas -->
+              <canvas id="terminalMatrixCanvas"></canvas>
+              
+              <div class="terminal-body">
+                <div class="terminal-output" id="terminalOutput">
+                  <!-- Dynamic lines populated by JS -->
+                </div>
+                <div class="terminal-input-line">
+                  <span class="terminal-prompt">ssp_09@iitg-ece:~$</span>
+                  <div class="terminal-input-wrapper">
+                    <input type="text" id="terminalInput" autocomplete="off" spellcheck="false" aria-label="Terminal command input">
+                    <span class="terminal-caret"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section (Timeline) -->
+    <section id="experience" class="experience-section scroll-reveal">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-subtitle">My Milestones</span>
+          <h2 class="section-title">Timeline &amp; Roles</h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-line"></div>
+
+          <!-- Item 1 -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card scroll-reveal-left">
+              <div class="time-header">
+                <span class="time-period">Oct 2025 – Present</span>
+                <span class="time-location">IIT Guwahati</span>
+              </div>
+              <h3 class="timeline-role">Junior Web Developer</h3>
+              <h4 class="timeline-company">Students' Web Committee</h4>
+              <p class="timeline-text">
+                Developing responsive, reliable frontend applications and modules for academic, cultural, and community activities at IIT Guwahati. Working on modern JS/React workflows and optimization.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-item right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card scroll-reveal-right">
+              <div class="time-header">
+                <span class="time-period">Nov 2024 – Feb 2025</span>
+                <span class="time-location">IIT Guwahati</span>
+              </div>
+              <h3 class="timeline-role">PR &amp; Branding Associate</h3>
+              <h4 class="timeline-company">Alcheringa Fest</h4>
+              <p class="timeline-text">
+                Collaborated with core marketing systems to structure outreach materials, manage social media profiles, and boost public branding for Alcheringa—the largest student cultural fest in Northeast India.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="timeline-item left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card scroll-reveal-left">
+              <div class="time-header">
+                <span class="time-period">Jan 2026 – Present</span>
+                <span class="time-location">IIT Guwahati</span>
+              </div>
+              <h3 class="timeline-role">NSS Cell Volunteer</h3>
+              <h4 class="timeline-company">National Service Scheme</h4>
+              <p class="timeline-text">
+                Completed 30+ hours of community service and outdoor outreach activities, building organizational systems and driving active volunteer communication.
+              </p>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="timeline-item right">
+            <div class="timeline-dot education-dot"></div>
+            <div class="timeline-content glass-card scroll-reveal-right">
+              <div class="time-header">
+                <span class="time-period">2024 – Present</span>
+                <span class="time-location">IIT Guwahati</span>
+              </div>
+              <h3 class="timeline-role">B.Tech. ECE Undergrad</h3>
+              <h4 class="timeline-company">Indian Institute of Technology, Guwahati</h4>
+              <p class="timeline-text">
+                Learning fundamentals of digital systems, circuit design, signal processing, mathematics, computing structures, and laboratory implementation.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements-section scroll-reveal">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-subtitle">What I've Earned</span>
+          <h2 class="section-title">Key Achievements</h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="achievements-grid">
+          
+          <div class="achievement-card glass-card hover-lift">
+            <div class="achievement-icon-wrapper">
+              <i data-lucide="terminal" class="ach-icon"></i>
+            </div>
+            <h3 class="achievement-title">Codeforces Specialist</h3>
+            <span class="achievement-score">Max Rating: 1404</span>
+            <p class="achievement-desc">
+              Active competitive programmer (handle: <strong>ssp_09</strong>). Ranked 1320th globally in Codeforces Round 1090 (Div. 4) and 1994th in Codeforces Round 1083 (Div. 2).
+            </p>
+            <a href="https://codeforces.com/profile/ssp_09" target="_blank" rel="noopener noreferrer" class="achievement-link">
+              Verify Handle <i data-lucide="external-link"></i>
+            </a>
+          </div>
+
+          <div class="achievement-card glass-card hover-lift">
+            <div class="achievement-icon-wrapper">
+              <i data-lucide="award" class="ach-icon"></i>
+            </div>
+            <h3 class="achievement-title">JEE Advanced 2024</h3>
+            <span class="achievement-score">Top 2.53% Nationwide</span>
+            <p class="achievement-desc">
+              Ranked in the top 2.53% among over 1.8 Lakh shortlisted candidates across India to secure admission into the Indian Institute of Technology.
+            </p>
+          </div>
+
+          <div class="achievement-card glass-card hover-lift">
+            <div class="achievement-icon-wrapper">
+              <i data-lucide="trophy" class="ach-icon"></i>
+            </div>
+            <h3 class="achievement-title">TS EAPCET 2024</h3>
+            <span class="achievement-score">Top 0.87% State Rank</span>
+            <p class="achievement-desc">
+              Ranked in the top 0.87% among 2.4 Lakh competing candidates across the state of Telangana.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section scroll-reveal">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-subtitle">Get In Touch</span>
+          <h2 class="section-title">Drop A Message</h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="contact-grid">
+          
+          <div class="contact-info-panel glass-card">
+            <h3>Contact Information</h3>
+            <p class="contact-intro-text">
+              Have an idea, project, or opportunity you'd like to discuss? Send a message and let's build something cool!
+            </p>
+
+            <div class="info-list">
+              <div class="info-item">
+                <div class="info-icon">
+                  <i data-lucide="mail"></i>
+                </div>
+                <div class="info-detail">
+                  <span class="info-label">Primary Email</span>
+                  <a href="mailto:sree.saipavan.pittala.me@gmail.com" class="info-value">sree.saipavan.pittala.me@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <i data-lucide="graduation-cap"></i>
+                </div>
+                <div class="info-detail">
+                  <span class="info-label">Academic Email</span>
+                  <a href="mailto:p.pittala@iitg.ac.in" class="info-value">p.pittala@iitg.ac.in</a>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <i data-lucide="phone"></i>
+                </div>
+                <div class="info-detail">
+                  <span class="info-label">Phone</span>
+                  <a href="tel:+917893390507" class="info-value">+91-7893390507</a>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <i data-lucide="map-pin"></i>
+                </div>
+                <div class="info-detail">
+                  <span class="info-label">Location</span>
+                  <span class="info-value">IIT Guwahati, Assam, India</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="admin-panel-trigger">
+              <button id="adminBtn" class="btn btn-secondary btn-sm admin-trigger">
+                <i data-lucide="database"></i> DB Messages Panel
+              </button>
+            </div>
+          </div>
+
+          <div class="contact-form-panel glass-card">
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="input-group">
+                  <input type="text" id="contactName" required>
+                  <label for="contactName">Your Name</label>
+                  <span class="input-line"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="input-group">
+                  <input type="email" id="contactEmail" required>
+                  <label for="contactEmail">Your Email</label>
+                  <span class="input-line"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="input-group">
+                  <textarea id="contactMessage" rows="5" required></textarea>
+                  <label for="contactMessage">Your Message</label>
+                  <span class="input-line"></span>
+                </div>
+              </div>
+
+              <button type="submit" id="submitBtn" class="btn btn-primary btn-block">
+                Send Message <i data-lucide="send" class="btn-icon"></i>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="glass-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <a href="#" class="logo">
+          <span class="logo-accent">&lt;</span>ssp<span class="logo-accent">_09 /&gt;</span>
+        </a>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#terminal">Terminal</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Pittala Sree Sai Pavan. Crafted from scratch.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Scroll-To-Top Button -->
+  <button id="scrollToTop" class="scroll-to-top-btn" aria-label="Scroll back to top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- PROJECT MODALS (POPUPS) -->
+  
+  <!-- Modal CVM++ -->
+  <div class="modal-overlay" id="modal-cvm">
+    <div class="modal-wrapper glass-card">
+      <button class="modal-close" aria-label="Close dialog"><i data-lucide="x"></i></button>
+      <div class="modal-header">
+        <span class="modal-category">Systems Programming</span>
+        <h3 class="modal-title">CVM++ — Stack-Based VM &amp; Compiler</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-meta-grid">
+          <div><strong>Timeline:</strong> Jan 2026 – Apr 2026</div>
+          <div><strong>Project Type:</strong> Team Project (IITG Coding Club)</div>
+          <div><strong>Languages:</strong> C++17 (No dependencies)</div>
+          <div><strong>Source Code:</strong> <a href="https://github.com/ssp-09" target="_blank" rel="noopener noreferrer">GitHub Repo <i data-lucide="external-link" class="small-icon"></i></a></div>
+        </div>
+        <hr>
+        <h4>Technical Deep Dive</h4>
+        <p>
+          CVM++ is a custom stack-based compilation and execution pipeline built from the ground up in modern C++17.
+        </p>
+        <ul>
+          <li><strong>Lexer &amp; Parser:</strong> Implemented a recursive-descent parser that parses algebraic expressions, loops, variables, conditional statements, and console I/O into an Abstract Syntax Tree (AST).</li>
+          <li><strong>Compiler:</strong> Emits a flat <code>uint8_t</code> stream bytecode containing 23 custom opcodes (e.g. <code>LOAD</code>, <code>STORE</code>, <code>ADD</code>, <code>JMP</code>, <code>HALT</code>).</li>
+          <li><strong>Forward-Jump Patching:</strong> Employs a two-pass assembler mechanism to resolve forward jump instruction offsets (e.g., in `if-else` and `while` structures) only after body bytecode emission is finished.</li>
+          <li><strong>Virtual Machine:</strong> Executes bytecode via a high-performance fetch-decode-execute loop with zero external overhead. Fast O(1) slot mapping for variable lookup instead of costly string maps.</li>
+          <li><strong>Interactive Disassembler:</strong> The system features a <code>--debug</code> flag that prints the parsed AST graphically and outputs the annotated bytecode disassembly side-by-side with instruction offset hex values.</li>
+        </ul>
+        <pre class="code-block"><code>// Sample output in --debug disassembler mode:
+0x0000: LOAD_CONST   0 (10)
+0x0002: STORE_FAST   1 (x)
+0x0004: LOAD_FAST    1 (x)
+0x0006: LOAD_CONST   1 (5)
+0x0008: ADD
+0x0009: PRINT_INT</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Parker -->
+  <div class="modal-overlay" id="modal-parker">
+    <div class="modal-wrapper glass-card">
+      <button class="modal-close" aria-label="Close dialog"><i data-lucide="x"></i></button>
+      <div class="modal-header">
+        <span class="modal-category">AI Engineering</span>
+        <h3 class="modal-title">Parker — AI Assistant with Persistent Memory</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-meta-grid">
+          <div><strong>Timeline:</strong> 2025 – Present</div>
+          <div><strong>Project Type:</strong> Individual Project</div>
+          <div><strong>Tech Stack:</strong> LangGraph, pgvector, PostgreSQL, Python, Whisper API</div>
+          <div><strong>GitHub:</strong> <a href="https://github.com/ssp-09" target="_blank" rel="noopener noreferrer">GitHub Repo <i data-lucide="external-link" class="small-icon"></i></a></div>
+        </div>
+        <hr>
+        <h4>Technical Deep Dive</h4>
+        <p>
+          Parker is a private, cross-platform Telegram bot AI companion built with a focus on human-like long-term memory retrieval and semantic correlation.
+        </p>
+        <ul>
+          <li><strong>4-Layer Memory Hierarchy:</strong> Segmented into active context, ranked facts, multi-session project trackers, and a 90–365 day archival archive.</li>
+          <li><strong>Episodic Summarization:</strong> Condenses interactions into a tree schema (chat log &rarr; day &rarr; week &rarr; month &rarr; year) to manage token contexts for LLMs efficiently over time.</li>
+          <li><strong>Semantic Search:</strong> Stores 1,024-dimensional pgvector embeddings in a local PostgreSQL instance, triggering vector cosine similarity searches on every user input.</li>
+          <li><strong>LangGraph Orchestration:</strong> Combines prompt engines, vector stores, memory consolidators, and chatbot handlers using a state machine layout designed to execute with 4 isolated API keys for parallel fault tolerance.</li>
+          <li><strong>Deployment:</strong> Integrates custom telegram listener libraries with Whisper voice inputs to convert sound snippets into text dynamically in Python.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal MWIS -->
+  <div class="modal-overlay" id="modal-mwis">
+    <div class="modal-wrapper glass-card">
+      <button class="modal-close" aria-label="Close dialog"><i data-lucide="x"></i></button>
+      <div class="modal-header">
+        <span class="modal-category">Algorithms &amp; Discrete Math</span>
+        <h3 class="modal-title">MWIS Solver — Maximum Weight Independent Set</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-meta-grid">
+          <div><strong>Timeline:</strong> Jan 2025 – Apr 2025</div>
+          <div><strong>Project Type:</strong> Team Project (IITG Coding Club)</div>
+          <div><strong>Languages:</strong> C++</div>
+          <div><strong>GitHub:</strong> <a href="https://github.com/ssp-09" target="_blank" rel="noopener noreferrer">GitHub Repo <i data-lucide="external-link" class="small-icon"></i></a></div>
+        </div>
+        <hr>
+        <h4>Technical Deep Dive</h4>
+        <p>
+          A high-performance algorithmic solver for computing the Maximum Weight Independent Set (an NP-hard problem) on large-scale sparse and dense graphs.
+        </p>
+        <ul>
+          <li><strong>Branch-and-Bound DFS:</strong> Traverses search space with highly pruned search trees utilizing suffix-sum bounding strategies based on degree heuristics.</li>
+          <li><strong>Bitmask Conflict Check:</strong> Stores local adjacency structures using 32-bit integer bitmasks, achieving O(1) bitwise intersection calculations for conflict checks on graphs holding up to 200,000 nodes and 200 Million edges.</li>
+          <li><strong>Buffered I/O speed:</strong> Swaps default <code>std::cin</code> with custom low-level <code>getchar_unlocked()</code> parsers, achieving up to 100x faster file reading during benchmarks.</li>
+          <li><strong>ADD/SWAP Metaheuristic:</strong> Applies a local search neighborhood restart strategy that jumps local optima to achieve 10-50% higher weight sets within a tight 300-second execution budget.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal HabitFlow -->
+  <div class="modal-overlay" id="modal-habit">
+    <div class="modal-wrapper glass-card">
+      <button class="modal-close" aria-label="Close dialog"><i data-lucide="x"></i></button>
+      <div class="modal-header">
+        <span class="modal-category">Frontend Web Development</span>
+        <h3 class="modal-title">HabitFlow — React Habit Tracker</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-meta-grid">
+          <div><strong>Timeline:</strong> Oct 2025</div>
+          <div><strong>Project Type:</strong> Personal Project</div>
+          <div><strong>Tech Stack:</strong> React, HTML5, CSS Variables, LocalStorage</div>
+          <div><strong>GitHub:</strong> <a href="https://github.com/ssp-09" target="_blank" rel="noopener noreferrer">GitHub Repo <i data-lucide="external-link" class="small-icon"></i></a></div>
+        </div>
+        <hr>
+        <h4>Technical Deep Dive</h4>
+        <p>
+          HabitFlow is a beautiful web application created to test custom CSS variables and UI transitions in React, giving users an visual hub to log routines.
+        </p>
+        <ul>
+          <li><strong>Streak Engines:</strong> Computes daily streaks dynamically based on timestamp checks, adjusting animations according to streak milestones.</li>
+          <li><strong>SVG Analytics:</strong> Renders responsive calendar grids and streak line graphs on the client side using pure CSS and custom SVGs.</li>
+          <li><strong>Persistence:</strong> Automatically backups and reads user state to/from browser LocalStorage with error correction checks.</li>
+          <li><strong>Theme Synergy:</strong> Built using a highly reactive CSS theme structure that matches system colors instantly.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADMIN DASHBOARD PANEL (FULL STACK PROOF) -->
+  <div class="admin-panel" id="adminPanel">
+    <div class="admin-wrapper glass-card animate-panel">
+      <div class="admin-header">
+        <h3><i data-lucide="database" class="db-icon"></i> Messages Database (JSON backend)</h3>
+        <button id="adminCloseBtn" class="btn btn-secondary btn-sm"><i data-lucide="x"></i> Close</button>
+      </div>
+      
+      <div class="admin-info-bar">
+        <span>Backend Source: <code>messages.json</code> via Express API</span>
+        <button id="refreshAdminBtn" class="btn btn-primary btn-sm"><i data-lucide="refresh-cw"></i> Refresh</button>
+      </div>
+
+      <div class="admin-messages-list-wrapper">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Timestamp</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Message</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="adminTableBody">
+            <!-- Messages populated via JS -->
+            <tr>
+              <td colspan="5" class="loading-td">
+                <span class="spinner"></span> Loading messages from Express...
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Resume (PDF Viewer) -->
+  <div class="modal-overlay" id="modal-resume">
+    <div class="modal-wrapper glass-card resume-modal-wrapper">
+      <button class="modal-close" aria-label="Close dialog"><i data-lucide="x"></i></button>
+      <div class="modal-header resume-modal-header">
+        <h3 class="modal-title">My Resume</h3>
+        <a href="resume.pdf" class="btn btn-primary btn-sm" download="IIT_Guwahati_Resume_Sree_Sai_Pavan.pdf">
+          Download PDF <i data-lucide="download" class="btn-icon"></i>
+        </a>
+      </div>
+      <div class="modal-body resume-modal-body">
+        <iframe src="resume.pdf" class="resume-iframe" title="Pittala Sree Sai Pavan Resume"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
