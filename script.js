@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cardCat = card.getAttribute('data-category');
         
         if (category === 'all' || cardCat === category) {
-          card.style.display = 'block';
+          card.style.display = '';
           // Trigger progress bar recalculation
           const progressBar = card.querySelector('.progress-bar');
           if (progressBar) {
@@ -296,6 +296,29 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
       }
     }
+  });
+
+  /* ==========================================================================
+     RESUME DUAL CV TAB SWITCHER
+     ========================================================================== */
+  const resumeTabs = document.querySelectorAll('.resume-tab');
+  const resumeIframe = document.getElementById('resumeIframe');
+
+  const cvFiles = {
+    sde: 'SDE_CV_P_SreeSaiPavan.pdf',
+    core: 'Core_CV_P_SreeSaiPavan.pdf'
+  };
+
+  resumeTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      resumeTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const cvType = tab.getAttribute('data-cv');
+      if (resumeIframe && cvFiles[cvType]) {
+        resumeIframe.src = cvFiles[cvType];
+      }
+    });
   });
 
   /* ==========================================================================
@@ -598,7 +621,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const centerX = 200;
   const centerY = 200;
   const maxRadius = 100;
-  const labelRadius = 120;
+  const labelRadius = 145;
   const numAxes = archetypes.length;
 
   function initRadarChart() {
@@ -625,7 +648,7 @@ document.addEventListener('DOMContentLoaded', () => {
       line.setAttribute('data-index', i);
       radarAxes.appendChild(line);
 
-      // Create label position
+      // Create label position — push labels further out to avoid overlap
       const xLabel = centerX + labelRadius * Math.cos(angle);
       const yLabel = centerY + labelRadius * Math.sin(angle);
 
@@ -645,10 +668,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       text.setAttribute('text-anchor', anchor);
       
+      // Per-axis dy offsets to prevent collisions
       let dy = '0';
-      if (i === 0) dy = '-6';
-      else if (i === 2 || i === 3) dy = '12';
-      else dy = '4';
+      if (i === 0) dy = '-10';        // Systems & Compilers (top center) — push up more
+      else if (i === 1) dy = '-2';     // DSA & Optimization (top-right) — pull up to clear polygon
+      else if (i === 2) dy = '16';     // AI Arch (bottom-right) — push down
+      else if (i === 3) dy = '16';     // Full-Stack (bottom-left) — push down
+      else if (i === 4) dy = '-2';     // Competitive Prog (top-left) — pull up
       text.setAttribute('dy', dy);
       text.textContent = arch.name;
       radarLabels.appendChild(text);
@@ -928,9 +954,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       case 'about':
         printLine('Pittala Sree Sai Pavan', 'info-out');
-        printLine('Electronics & Communication Engineering undergraduate at IIT Guwahati.');
-        printLine('Specializes in Systems Programming, low-level optimization in C++, and Web Architecture.');
-        printLine('Notable Projects: CVM++ (Stack Virtual Machine), Parker (AI Agent with 4-Layer Memory), MWIS Solver (Branch-and-Bound C++ graph solver).');
+        printLine('Electronics & Communication Engineering undergraduate at IIT Guwahati. CGPA: 7.13');
+        printLine('Specializes in Systems Programming, analog/digital circuit design, low-level optimization in C++, and Web Architecture.');
+        printLine('Notable Projects: CVM++ (Stack Virtual Machine), Miller-Compensated OTA, FPGA Traffic Controller, Parker (AI Agent with 4-Layer Memory), MWIS Solver (Branch-and-Bound C++ graph solver).');
         break;
 
       case 'skills':
@@ -945,6 +971,10 @@ document.addEventListener('DOMContentLoaded', () => {
         printLine('Tools & AI:', 'info-out');
         printSkillBar('Git/GitHub', 90);
         printSkillBar('NumPy/Pandas', 85);
+        printSkillBar('SymPy', 80);
+        printLine('Hardware & EDA:', 'info-out');
+        printSkillBar('Verilog HDL', 78);
+        printSkillBar('LTspice/MATLAB', 75);
         break;
 
       case 'archetype':
@@ -1014,9 +1044,18 @@ document.addEventListener('DOMContentLoaded', () => {
           } else if (projectId === 'habit' || projectId === 'habitflow') {
             modalId = 'modal-habit';
             projectName = 'HabitFlow — React Habit Tracker';
+          } else if (projectId === 'ota' || projectId === 'amplifier') {
+            modalId = 'modal-ota';
+            projectName = 'Miller-Compensated OTA';
+          } else if (projectId === 'fpga' || projectId === 'traffic') {
+            modalId = 'modal-fpga';
+            projectName = 'Traffic Signal Controller — FPGA';
+          } else if (projectId === 'circuit' || projectId === 'analyser') {
+            modalId = 'modal-circuit';
+            projectName = 'Automated Circuit Analyser';
           } else if (projectId === 'resume') {
             modalId = 'modal-resume';
-            projectName = 'My Resume (PDF Viewer)';
+            projectName = 'My Resumes (Dual CV Viewer)';
           }
           
           if (modalId) {
@@ -1043,7 +1082,10 @@ document.addEventListener('DOMContentLoaded', () => {
           printLine('  <strong style="color: var(--accent-primary)">parker</strong>     - Parker AI Assistant with Persistent Memory');
           printLine('  <strong style="color: var(--accent-primary)">mwis</strong>       - MWIS Solver Graph Independent Set Solver');
           printLine('  <strong style="color: var(--accent-primary)">habit</strong>      - HabitFlow React Daily Habit Tracker');
-          printLine('  <strong style="color: var(--accent-primary)">resume</strong>     - Interactive glassmorphic Resume PDF viewer');
+          printLine('  <strong style="color: var(--accent-primary)">ota</strong>        - Miller-Compensated OTA (Analog IC)');
+          printLine('  <strong style="color: var(--accent-primary)">fpga</strong>       - Traffic Signal Controller on FPGA');
+          printLine('  <strong style="color: var(--accent-primary)">circuit</strong>    - Automated Circuit Analyser (Python)');
+          printLine('  <strong style="color: var(--accent-primary)">resume</strong>     - Interactive Dual CV Viewer');
         }
         break;
 
