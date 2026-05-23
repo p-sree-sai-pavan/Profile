@@ -194,12 +194,12 @@
                 </defs>
                 
                 <!-- Background glow circle -->
-                <circle cx="200" cy="200" r="130" fill="url(#radarGlow)" />
+                <circle cx="200" cy="200" r="100" fill="url(#radarGlow)" />
                 
                 <!-- Web Grid Rings -->
-                <circle cx="200" cy="200" r="43.3" class="radar-ring" />
-                <circle cx="200" cy="200" r="86.6" class="radar-ring" />
-                <circle cx="200" cy="200" r="130" class="radar-ring" />
+                <circle cx="200" cy="200" r="33.3" class="radar-ring" />
+                <circle cx="200" cy="200" r="66.6" class="radar-ring" />
+                <circle cx="200" cy="200" r="100" class="radar-ring" />
                 
                 <!-- Axis lines & elements populated by JS -->
                 <g id="radarAxes"></g>
@@ -574,7 +574,7 @@
                   <!-- Dynamic lines populated by JS -->
                 </div>
                 <div class="terminal-input-line">
-                  <span class="terminal-prompt">ssp_09@iitg-ece:~$</span>
+                  <span class="terminal-prompt"><span class="term-user">ssp_09</span><span class="term-host">@iitg-ece</span>:~$</span>
                   <div class="terminal-input-wrapper">
                     <input type="text" id="terminalInput" autocomplete="off" spellcheck="false" aria-label="Terminal command input">
                     <span class="terminal-caret"></span>

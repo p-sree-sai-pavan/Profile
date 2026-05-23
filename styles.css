@@ -767,7 +767,8 @@ section {
   padding: 1.5rem;
   background: linear-gradient(to top, rgba(3, 7, 18, 0.9) 0%, rgba(3, 7, 18, 0.4) 60%, transparent 100%);
   display: flex;
-  gap: 0.8rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   justify-content: center;
 }
 
@@ -1843,6 +1844,8 @@ section {
 
 .footer-links {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
 }
 
@@ -2334,7 +2337,7 @@ section {
    RESPONSIVE MEDIA QUERIES
    ========================================================================== */
 
-@media (max-width: 968px) {
+@media (max-width: 1080px) {
   html {
     font-size: 15px;
   }
@@ -2421,6 +2424,8 @@ section {
     pointer-events: none;
     z-index: 99;
     box-shadow: 0 10px 30px var(--glass-shadow);
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
   }
   
   .nav-menu.active {
@@ -2542,6 +2547,18 @@ section {
   
   .timeline-content {
     padding: 1.2rem;
+  }
+
+  .term-host {
+    display: none;
+  }
+
+  .about-text-card,
+  .about-dashboard,
+  .contact-info-panel,
+  .contact-form-panel,
+  .achievement-card {
+    padding: 1.5rem !important;
   }
 }
 

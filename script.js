@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================================== */
   const cursorGlow = document.getElementById('cursorGlow');
   
-  if (window.innerWidth > 968) {
+  if (window.innerWidth > 1080) {
     document.addEventListener('mousemove', (e) => {
       cursorGlow.style.left = `${e.clientX}px`;
       cursorGlow.style.top = `${e.clientY}px`;
@@ -597,8 +597,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const centerX = 200;
   const centerY = 200;
-  const maxRadius = 130;
-  const labelRadius = 152;
+  const maxRadius = 100;
+  const labelRadius = 120;
   const numAxes = archetypes.length;
 
   function initRadarChart() {
@@ -912,7 +912,7 @@ document.addEventListener('DOMContentLoaded', () => {
     historyIndex = commandHistory.length;
 
     // Echo command
-    printLine(`<span class="prompt">ssp_09@iitg-ece:~$</span> <span class="text">${escapeHTML(input)}</span>`, 'command-echo');
+    printLine(`<span class="prompt"><span class="term-user">ssp_09</span><span class="term-host">@iitg-ece</span>:~$</span> <span class="text">${escapeHTML(input)}</span>`, 'command-echo');
 
     const args = input.split(/\s+/);
     const cmd = args[0].toLowerCase();
