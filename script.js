@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
   if (window.innerWidth > 1080) {
     document.addEventListener('mousemove', (e) => {
-      cursorGlow.style.left = `${e.clientX}px`;
-      cursorGlow.style.top = `${e.clientY}px`;
+      // Use translate3d to avoid triggering layout reflows (improves page scroll and cursor frame rates)
+      cursorGlow.style.transform = `translate3d(${e.clientX - 250}px, ${e.clientY - 250}px, 0)`;
     });
   }
 
@@ -152,6 +152,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (window.innerWidth > 768) {
     tiltCards.forEach(card => {
+      // Disable CSS transitions during active mouse tracking to prevent stutter/lag conflicts
+      card.addEventListener('mouseenter', () => {
+        card.style.transition = 'none';
+      });
+
       card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left; // Mouse position X relative to card
@@ -171,6 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       card.addEventListener('mouseleave', () => {
+        card.style.transition = ''; // Restore default CSS transition so it snaps back smoothly
         card.style.transform = '';
       });
     });
@@ -191,9 +197,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const filterValue = btn.getAttribute('data-filter');
 
       projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
+        const category = card.getAttribute('data-category') || '';
+        const categories = category.split(' ');
         
-        if (filterValue === 'all' || category === filterValue) {
+        if (filterValue === 'all' || categories.includes(filterValue)) {
           card.style.display = 'flex';
           setTimeout(() => {
             card.style.opacity = '1';
@@ -305,8 +312,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const resumeIframe = document.getElementById('resumeIframe');
 
   const cvFiles = {
-    sde: 'SDE_CV_P_SreeSaiPavan.pdf',
-    core: 'Core_CV_P_SreeSaiPavan.pdf'
+    sde: 'SDE_CV_PSreeSaiPavan.pdf',
+    core: 'Core_CV_PSreeSaiPavan.pdf'
   };
 
   resumeTabs.forEach(tab => {
@@ -1018,13 +1025,11 @@ document.addEventListener('DOMContentLoaded', () => {
       case 'theme':
         const currentNewTheme = toggleTheme();
         printLine(`System theme toggled to <strong style="color: var(--accent-primary)">${currentNewTheme}</strong> mode.`, 'success-out');
-        break;
-
-      case 'projects':
+          case 'projects':
         if (args.length > 1 && args[1].toLowerCase() === 'open') {
           if (args.length < 3) {
             printLine('Error: Please specify the project ID. Usage: projects open &lt;id&gt;', 'error-out');
-            printLine('Example: projects open cvm', 'system-out');
+            printLine('Example: projects open parker', 'system-out');
             break;
           }
           
@@ -1032,27 +1037,36 @@ document.addEventListener('DOMContentLoaded', () => {
           let modalId = '';
           let projectName = '';
           
-          if (projectId === 'cvm' || projectId === 'cvm++') {
-            modalId = 'modal-cvm';
-            projectName = 'CVM++ — Stack-Based VM & Compiler';
-          } else if (projectId === 'parker') {
+          if (projectId === 'parker') {
             modalId = 'modal-parker';
-            projectName = 'Parker — AI Assistant with Persistent Memory';
-          } else if (projectId === 'mwis' || projectId === 'solver' || projectId === 'mwis solver') {
+            projectName = 'P.A.R.K.E.R — Autonomous AI Agent';
+          } else if (projectId === 'mac16' || projectId === 'mac-16') {
+            modalId = 'modal-mac16';
+            projectName = 'MAC-16 — Custom AI RISC Processor';
+          } else if (projectId === 'cvm' || projectId === 'cvm++') {
+            modalId = 'modal-cvm';
+            projectName = 'CVM++ — Stack-Based VM &amp; Compiler';
+          } else if (projectId === 'gitlite' || projectId === 'git') {
+            modalId = 'modal-gitlite';
+            projectName = 'GitLite — Git-Inspired VCS';
+          } else if (projectId === 'mwis' || projectId === 'solver') {
             modalId = 'modal-mwis';
-            projectName = 'MWIS Solver — Maximum Weight Independent Set';
-          } else if (projectId === 'habit' || projectId === 'habitflow') {
-            modalId = 'modal-habit';
-            projectName = 'HabitFlow — React Habit Tracker';
-          } else if (projectId === 'ota' || projectId === 'amplifier') {
-            modalId = 'modal-ota';
-            projectName = 'Miller-Compensated OTA';
-          } else if (projectId === 'fpga' || projectId === 'traffic') {
-            modalId = 'modal-fpga';
-            projectName = 'Traffic Signal Controller — FPGA';
+            projectName = 'MWIS Solver — Graph Solver';
           } else if (projectId === 'circuit' || projectId === 'analyser') {
             modalId = 'modal-circuit';
             projectName = 'Automated Circuit Analyser';
+          } else if (projectId === 'ota' || projectId === 'amplifier') {
+            modalId = 'modal-ota';
+            projectName = 'Two-Stage Miller-Compensated OTA';
+          } else if (projectId === 'fpga' || projectId === 'traffic') {
+            modalId = 'modal-fpga';
+            projectName = 'Traffic Signal Controller — FPGA';
+          } else if (projectId === 'hackathon' || projectId === 'squad') {
+            modalId = 'modal-hackathonsquad';
+            projectName = 'Hackathon Squad Dashboard';
+          } else if (projectId === 'habit' || projectId === 'habitflow') {
+            modalId = 'modal-habit';
+            projectName = 'HabitFlow — Habit Tracker';
           } else if (projectId === 'resume') {
             modalId = 'modal-resume';
             projectName = 'My Resumes (Dual CV Viewer)';
@@ -1078,13 +1092,16 @@ document.addEventListener('DOMContentLoaded', () => {
           printLine('Featured Projects Showcase:', 'info-out');
           printLine('Use <strong style="color: var(--accent-secondary)">projects open &lt;id&gt;</strong> to open details.', 'system-out');
           printLine('');
-          printLine('  <strong style="color: var(--accent-primary)">cvm</strong>        - CVM++ Stack-Based VM & Compiler');
-          printLine('  <strong style="color: var(--accent-primary)">parker</strong>     - Parker AI Assistant with Persistent Memory');
+          printLine('  <strong style="color: var(--accent-primary)">parker</strong>     - P.A.R.K.E.R Autonomous AI Agent Engine');
+          printLine('  <strong style="color: var(--accent-primary)">mac16</strong>      - MAC-16 AI-Accelerated 16-Bit RISC CPU');
+          printLine('  <strong style="color: var(--accent-primary)">cvm</strong>        - CVM++ Stack-Based VM &amp; Compiler');
+          printLine('  <strong style="color: var(--accent-primary)">gitlite</strong>    - GitLite Git-Inspired VCS (C++17)');
           printLine('  <strong style="color: var(--accent-primary)">mwis</strong>       - MWIS Solver Graph Independent Set Solver');
-          printLine('  <strong style="color: var(--accent-primary)">habit</strong>      - HabitFlow React Daily Habit Tracker');
+          printLine('  <strong style="color: var(--accent-primary)">circuit</strong>    - Automated Circuit Analyser (Python)');
           printLine('  <strong style="color: var(--accent-primary)">ota</strong>        - Miller-Compensated OTA (Analog IC)');
           printLine('  <strong style="color: var(--accent-primary)">fpga</strong>       - Traffic Signal Controller on FPGA');
-          printLine('  <strong style="color: var(--accent-primary)">circuit</strong>    - Automated Circuit Analyser (Python)');
+          printLine('  <strong style="color: var(--accent-primary)">hackathon</strong>  - Hackathon Squad Team Portal');
+          printLine('  <strong style="color: var(--accent-primary)">habit</strong>      - HabitFlow React Streak Tracker');
           printLine('  <strong style="color: var(--accent-primary)">resume</strong>     - Interactive Dual CV Viewer');
         }
         break;
