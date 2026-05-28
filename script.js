@@ -39,17 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleTheme();
   });
 
-  /* ==========================================================================
-     DESKTOP CURSOR GLOW EFFECT
-     ========================================================================== */
-  const cursorGlow = document.getElementById('cursorGlow');
-  
-  if (window.innerWidth > 1080) {
-    document.addEventListener('mousemove', (e) => {
-      // Use translate3d to avoid triggering layout reflows (improves page scroll and cursor frame rates)
-      cursorGlow.style.transform = `translate3d(${e.clientX - 250}px, ${e.clientY - 250}px, 0)`;
-    });
-  }
+
 
   /* ==========================================================================
      MOBILE NAVIGATION MENU
